@@ -4,18 +4,79 @@
 * บรรยายเรื่อง UML โดย อ.ปานใจ  
 
 ข้อ1
+```
+@startuml
+timeunit <- days
+timeunit <- hours
+timeunit <- minutes
+@enduml
+```
 ![](http://www.plantuml.com/plantuml/img/AydCJItDoonHiD5LI4ciB5RWAa4IoSWlBIf64SdDp2ijIItc0W00)
 
 ข้อ2
+```
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor me
+participant "Home1" as A
+participant "Home2" as B
+participant "Home3" as C
+
+me -> A: Do
+activate A
+
+A -> B: Do
+activate B
+
+B -> C: Do 
+C --> B: check
+
+destroy C
+B --> A: check 
+deactivate B
+
+A --> teacher: pass
+deactivate A
+
+@enduml
+```
 ![](http://www.plantuml.com/plantuml/img/RT0zRiCm30NWdQSWiXj8NA13XYAICsJiq0iGCb4BZYI7bFkJqqTsKK11ihxluH7WGJD9diCPGKSV9n8Ag7oPEJes8kdxO_1kZAoARLMHDCVU9Oais6uh2FGJIfa-MVsLyNNxPFUzdFJEJnGpbXcMiuyCG2udmS0mLRuvfS2x3PAYmKTfLx6FyB921n0OcpSqUpocvOB_einem2oflKyjs2NjxjCEEcp-ocvWDmBqh5dIRn6xYlcNdgijirekqS2onubKwu81E73io-i1u0O0)
 
 ข้อ3
+```
+@startuml
+:Gluta: -left-> (play) 
+:Gluta: -right-> (sleep) 
+:Gluta: -up-> (swim) 
+:Gluta: -down-> (smile)
+@enduml
+```
 ![](http://www.plantuml.com/plantuml/img/SoWkIImgAStDKU2oSiyfBKcqKj3DIKqhqRLJq2Z8IQpKH18loapF04iKvwIc5Y3Bb1Q0XSipSv55K_BByy3YkPavgPfS3gbvAK2B0000)
 
 ข้อ4
+```
+@startuml
+actor PPAP #red
+boundary APPLEPEN
+PPAP -> PEN : I have
+PPAP -> APPLE : I have
+PPAP -> APPLEPEN : Aha
+@enduml
+```
 ![](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuU9AJ2x9Br88270CK50kIatXIielpKj9BAfKS0m8y74DSFNZuW9BwkhQAG1v2bOAdWePYMMf256mGbpY42sE6ObSN5mEgNafG3i1)
 
 ข้อ5
+```
+@startuml
+actor me #red
+actor you
+me -> you
+@enduml
+```
 ![](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuU9AJ2x9BrB8JLLGBafDWV8gyqkvk812jdOWfeALGavcTYeNbqDgNWfG3m00)
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/0eq2FGEQul8/0.jpg)](http://www.youtube.com/watch?v=0eq2FGEQul8 "บรรยายเรื่อง UML โดย อ.ปานใจ  " target="_blank") 
